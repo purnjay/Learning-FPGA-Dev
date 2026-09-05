@@ -1,8 +1,8 @@
 // Implementing a 8 to 1 mux 
-module 8to1_mux(
+module mux_8to1(
     input [7:0] a, // normal inputs
     input [2:0] sel, // the selection input is a 3 bit wide input
-    output out, // output 
+    output reg out // output 
 );
 
 // always block for the 8 to 1 mux, it will check the value of sel and assign the corresponding input to the output
