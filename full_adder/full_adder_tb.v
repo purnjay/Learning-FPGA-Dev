@@ -11,27 +11,38 @@ full_adder fa(.a(a), .b(b), .cin(cin), .total_sum(sum), .cout(cout));
 
 // Now we add the test instructions, which is the truth table for the full adder to verify operation
     initial begin
-        
-        // Dump waveform for debugging
-        $dumpfile("fa_waveform.vcd");
-        $dumpvars(0, fa);
 
         a = 0; b = 0; cin = 0;
         #10;
+        $display("Sum: %b, Carry Out: %b", sum, cout); // display the output
+        
         a = 0; b = 0; cin = 1;
         #10;
+        $display("Sum: %b, Carry Out: %b", sum, cout); // display the output
+        
         a = 0; b = 1; cin = 0;
         #10;
+        $display("Sum: %b, Carry Out: %b", sum, cout); // display the output
+       
         a = 0; b = 1; cin = 1;
         #10;
+        $display("Sum: %b, Carry Out: %b", sum, cout); // display the output
         a = 1; b = 0; cin = 0;
         #10;
+        $display("Sum: %b, Carry Out: %b", sum, cout); // display the output
+        
         a = 1; b = 0; cin = 1;
         #10;
+        $display("Sum: %b, Carry Out: %b", sum, cout); // display the output
+        
         a = 1; b = 1; cin = 0;
         #10;
+        $display("Sum: %b, Carry Out: %b", sum, cout); // display the output
+
         a = 1; b = 1; cin = 1;
         #10;
+        $display("Sum: %b, Carry Out: %b", sum, cout); // display the output
+       
         $finish;
     end
 endmodule

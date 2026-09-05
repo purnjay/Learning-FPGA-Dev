@@ -1,5 +1,6 @@
 `timescale 1ns/1ps
 `include "half_adder.v"
+
 module half_adder_tb;
     reg a, b; // register for inputs A and B 
     wire sum, carry; // wire for outputs sum and carry
@@ -11,18 +12,22 @@ module half_adder_tb;
     initial begin
 
         // Dump waveform for debugging
-        $dumpfile("waveform.vcd");
+        $dumpfile("half_adder.vcd");
         $dumpvars(0, u0);
 
         //Testbench parameters being set, with varying inputs
         a = 0; b = 0;
         #10
+        $display("Sum: %b, Carry: %b", sum, carry); // display the output
         a = 0; b = 1;
         #10
+        $display("Sum: %b, Carry: %b", sum, carry); // display the output
         a = 1; b = 0;
         #10
+        $display("Sum: %b, Carry: %b", sum, carry); // display the output
         a = 1; b = 1;
         #10
-        $stop;
+        $display("Sum: %b, Carry: %b", sum, carry); // display the output
+        $finish; // stop the simulation
     end
 endmodule
