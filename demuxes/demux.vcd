@@ -1,5 +1,5 @@
 $date
-	Sat Sep 05 03:45:38 2026
+	Sat Sep 05 13:13:30 2026
 $end
 $version
 	Icarus Verilog
@@ -8,15 +8,108 @@ $timescale
 	1ps
 $end
 $scope module demux_tb $end
-$var wire 1 ! out1 $end
-$var wire 1 " out0 $end
-$var reg 1 # a $end
-$var reg 1 $ sel $end
+$var wire 8 ! out8 [7:0] $end
+$var wire 4 " out4 [3:0] $end
+$var wire 2 # out [1:0] $end
+$var reg 1 $ a $end
+$var reg 1 % b $end
+$var reg 1 & c $end
+$var reg 1 ' sel $end
+$var reg 2 ( sel4 [1:0] $end
+$var reg 3 ) sel8 [2:0] $end
 $scope module d1 $end
-$var wire 1 # a $end
-$var wire 1 $ sel $end
-$var reg 1 " out0 $end
-$var reg 1 ! out1 $end
+$var wire 1 $ a $end
+$var wire 1 ' sel $end
+$var reg 1 * out0 $end
+$var reg 1 + out1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 % a $end
+$var wire 2 , sel [1:0] $end
+$var wire 4 - out [3:0] $end
+$var wire 1 . carry1 $end
+$var wire 1 / carry0 $end
+$scope module d1 $end
+$var wire 1 % a $end
+$var wire 1 0 sel $end
+$var reg 1 / out0 $end
+$var reg 1 . out1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 / a $end
+$var wire 1 1 sel $end
+$var reg 1 2 out0 $end
+$var reg 1 3 out1 $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 . a $end
+$var wire 1 4 sel $end
+$var reg 1 5 out0 $end
+$var reg 1 6 out1 $end
+$upscope $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 & a $end
+$var wire 3 7 sel [2:0] $end
+$var wire 8 8 out [7:0] $end
+$var wire 1 9 carry2 $end
+$var wire 1 : carry1 $end
+$scope module d1 $end
+$var wire 1 & a $end
+$var wire 1 ; sel $end
+$var reg 1 : out0 $end
+$var reg 1 9 out1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 : a $end
+$var wire 2 < sel [1:0] $end
+$var wire 4 = out [3:0] $end
+$var wire 1 > carry1 $end
+$var wire 1 ? carry0 $end
+$scope module d1 $end
+$var wire 1 : a $end
+$var wire 1 @ sel $end
+$var reg 1 ? out0 $end
+$var reg 1 > out1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 ? a $end
+$var wire 1 A sel $end
+$var reg 1 B out0 $end
+$var reg 1 C out1 $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 > a $end
+$var wire 1 D sel $end
+$var reg 1 E out0 $end
+$var reg 1 F out1 $end
+$upscope $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 9 a $end
+$var wire 2 G sel [1:0] $end
+$var wire 4 H out [3:0] $end
+$var wire 1 I carry1 $end
+$var wire 1 J carry0 $end
+$scope module d1 $end
+$var wire 1 9 a $end
+$var wire 1 K sel $end
+$var reg 1 J out0 $end
+$var reg 1 I out1 $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 J a $end
+$var wire 1 L sel $end
+$var reg 1 M out0 $end
+$var reg 1 N out1 $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 I a $end
+$var wire 1 O sel $end
+$var reg 1 P out0 $end
+$var reg 1 Q out1 $end
+$upscope $end
+$upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -25,13 +118,341 @@ $dumpall
 $end
 #0
 $dumpvars
+xQ
+xP
+xO
+xN
+xM
+xL
+xK
+xJ
+xI
+bx H
+bx G
+xF
+xE
+xD
+xC
+xB
+xA
+x@
+x?
+x>
+bx =
+bx <
+x;
+x:
+x9
+bx 8
+bx 7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+bx -
+bx ,
+0+
+0*
+bx )
+bx (
+0'
+x&
+x%
 0$
-1#
-1"
-0!
+b0 #
+bx "
+bx !
 $end
+#5
+b1 #
+1*
+1$
 #10
-1!
-0"
+b0 #
+0*
+1'
+0$
+#15
+b10 #
+1+
 1$
 #20
+06
+05
+03
+b0 "
+b0 -
+02
+00
+01
+04
+0.
+0/
+b0 (
+b0 ,
+0%
+#25
+b1 "
+b1 -
+12
+1/
+1%
+#30
+b0 "
+b0 -
+02
+10
+0/
+b1 (
+b1 ,
+0%
+#35
+b100 "
+b100 -
+15
+1.
+1%
+#40
+b0 "
+b0 -
+05
+00
+11
+14
+0.
+b10 (
+b10 ,
+0%
+#45
+b10 "
+b10 -
+13
+1/
+1%
+#50
+b0 "
+b0 -
+03
+10
+0/
+b11 (
+b11 ,
+0%
+#55
+b1000 "
+b1000 -
+16
+1.
+1%
+#60
+0Q
+0P
+0N
+b0 H
+0M
+0F
+0E
+0C
+b0 !
+b0 8
+b0 =
+0B
+0@
+0A
+0D
+0K
+0L
+0O
+0I
+0J
+0>
+0?
+0;
+b0 <
+b0 G
+09
+0:
+b0 )
+b0 7
+0&
+#65
+b1 !
+b1 8
+b1 =
+1B
+1?
+1:
+1&
+#70
+b0 !
+b0 8
+b0 =
+0B
+1@
+1K
+0?
+b1 <
+b1 G
+0:
+b1 )
+b1 7
+0&
+#75
+b100 !
+b100 8
+b100 =
+1E
+1>
+1:
+1&
+#80
+b0 !
+b0 8
+b0 =
+0E
+0@
+1A
+1D
+0K
+1L
+1O
+0>
+b10 <
+b10 G
+0:
+b10 )
+b10 7
+0&
+#85
+b10 !
+b10 8
+b10 =
+1C
+1?
+1:
+1&
+#90
+b0 !
+b0 8
+b0 =
+0C
+1@
+1K
+0?
+b11 <
+b11 G
+0:
+b11 )
+b11 7
+0&
+#95
+b1000 !
+b1000 8
+b1000 =
+1F
+1>
+1:
+1&
+#100
+b0 !
+b0 8
+b0 =
+0F
+0@
+0A
+0D
+0K
+0L
+0O
+0>
+1;
+b0 <
+b0 G
+0:
+b100 )
+b100 7
+0&
+#105
+b10000 !
+b10000 8
+b1 H
+1M
+1J
+19
+1&
+#110
+b0 !
+b0 8
+b0 H
+0M
+1@
+1K
+0J
+b1 <
+b1 G
+09
+b101 )
+b101 7
+0&
+#115
+b1000000 !
+b1000000 8
+b100 H
+1P
+1I
+19
+1&
+#120
+b0 !
+b0 8
+b0 H
+0P
+0@
+1A
+1D
+0K
+1L
+1O
+0I
+b10 <
+b10 G
+09
+b110 )
+b110 7
+0&
+#125
+b100000 !
+b100000 8
+b10 H
+1N
+1J
+19
+1&
+#130
+b0 !
+b0 8
+b0 H
+0N
+1@
+1K
+0J
+b11 <
+b11 G
+09
+b111 )
+b111 7
+0&
+#135
+b10000000 !
+b10000000 8
+b1000 H
+1Q
+1I
+19
+1&
+#140

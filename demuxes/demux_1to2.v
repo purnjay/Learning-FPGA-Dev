@@ -1,4 +1,6 @@
-module demux_1to2(
+`ifndef DMUX_1TO2_V
+`define DMUX_1TO2_V
+module dmux_1to2(
     input a, // input to the demux
     input sel, // selection input
     output reg out0, // output 0
@@ -15,3 +17,4 @@ always @(*) begin
     end
 end
 endmodule
+`endif
